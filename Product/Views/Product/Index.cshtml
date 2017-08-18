@@ -1,0 +1,12 @@
+﻿@Html.Partial("navigationPartial");
+
+<div class="admin-content">
+
+</div>
+
+@section scripts{
+    <script>
+        var user = @Html.Raw(Json.Encode(Model));
+    </script>
+    <script type="text/javascript" src="~/Scripts/Product/Product.js"></script>
+}

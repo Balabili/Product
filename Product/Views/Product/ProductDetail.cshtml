@@ -1,0 +1,32 @@
+﻿@Html.Partial("navigationPartial");
+<div class="admin-content row">
+    <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Product List</a></li>
+        <li class="active">Product Details</li>
+    </ol>
+    <div class="col-lg-9 col-lg-offset-2">
+        <h3 style="text-align:center;">Information</h3>
+        <div class="col-lg-6 col-lg-offset-2">
+            <dl class="dl-horizontal" style="margin-top:50px;">
+                <dt>Product Id:</dt>
+                <dd id="productId"></dd>
+            </dl>
+            <dl class="dl-horizontal">
+                <dt>Product Name:</dt>
+                <dd id="productName"></dd>
+            </dl>
+            <dl class="dl-horizontal">
+                <dt>Description:</dt>
+                <dd id="description"></dd>
+            </dl>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        var productInfo = @Html.Raw(Json.Encode(Model));
+    </script>
+    <script src="~/Scripts/Product/ProductDetails.js"></script>
+}

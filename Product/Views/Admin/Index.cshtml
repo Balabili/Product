@@ -1,0 +1,25 @@
+﻿@using System.Web.Helpers
+@{
+    ViewBag.Title = "Index";
+}
+
+<div>
+    <div id="loginArea">
+        <div>Login Name</div>
+        <input id="loginName" type="text" placeholder="Input Login Name" />
+    </div>
+    <div id="passwordArea">
+        <div>PassWord</div>
+        <input id="passWord" type="password" placeholder="Input Password" />
+        <div>PassWord Once More</div>
+        <input id="passWordAgain" type="password" placeholder="Input Password" />
+    </div>
+</div>
+<button id="register">Register</button>
+
+@section scripts{
+    <script>
+
+    </script>
+    <script type="text/javascript" src="~/Scripts/Admin/Admin.js"></script>
+}

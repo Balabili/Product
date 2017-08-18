@@ -1,0 +1,26 @@
+﻿@using System.Web.Helpers
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row main-content">
+    <div class="col-lg-6 col-lg-offset-3 form-group" style="vertical-align:middle;">
+        <div id="loginArea">
+            <label for="loginName">Login Name</label>
+            <input class="form-control" id="loginName" type="text" placeholder="Input Login Name" />
+        </div>
+        <div id="passwordArea">
+            <label for="passWord">PassWord</label>
+            <input class="form-control" id="passWord" type="password" placeholder="Input Password" />
+            <label for="passWordAgain">PassWord Again</label>
+            <input class="form-control" id="passWordAgain" type="password" placeholder="Input Password" />
+        </div>
+    </div>
+    <div class="col-lg-6 col-lg-offset-3" style="margin-top:10px;">
+        <button class="btn btn-success btn-block" id="register">Register</button>
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript" src="~/Scripts/Register/Register.js"></script>
+}

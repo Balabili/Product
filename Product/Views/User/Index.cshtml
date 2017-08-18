@@ -1,0 +1,41 @@
+﻿@Html.Partial("navigationPartial");
+
+<div class="admin-content row">
+    <ul class="nav nav-pills nav-stacked col-lg-2" style="text-align:center;">
+        <li class="active"><a href="~/User/Index">Index</a></li>
+        <li><a href="~/User/InformationConfig">Information Configuration</a></li>
+        <li><a href="~/User/ChangePassword">Change Password</a></li>
+    </ul>
+    <div class="col-lg-9">
+        <h3 style="text-align:center;">Information</h3>
+        <div class="col-lg-6 col-lg-offset-2">
+            <dl class="dl-horizontal" style="margin-top:50px;">
+                <dt>User Login Name:</dt>
+                <dd id="loginName"></dd>
+            </dl>
+            <dl class="dl-horizontal">
+                <dt>Name:</dt>
+                <dd id="name"></dd>
+            </dl>
+            <dl class="dl-horizontal">
+                <dt>Gender:</dt>
+                <dd id="gender"></dd>
+            </dl>
+            <dl class="dl-horizontal">
+                <dt>Age:</dt>
+                <dd id="age"></dd>
+            </dl>
+            <dl class="dl-horizontal">
+                <dt>Email:</dt>
+                <dd id="email"></dd>
+            </dl>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        var userInfo = @Html.Raw(Json.Encode(Model));
+    </script>
+    <script src="~/Scripts/User/Index.js"></script>
+}

@@ -1,0 +1,17 @@
+﻿<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="~/Product/Index"><span class="glyphicon glyphicon-home"></span><span style="margin-left:10px;">Home</span></a>
+    </div>
+    <div>
+        <ul class="nav navbar-nav">
+            <li id="isAdmin" style="display:none;"><a href="~/Admin/UserList">User List</a></li>
+            <li id="productNav"><a href="~/Product/ProductList">Product List</a></li>
+        </ul>
+    </div>
+    <div style="float:right;">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="~/User/Index">@ViewData["UserName"]</a></li>
+            <li id="logout"><a href="~/login/logout">Log Out</a></li>
+        </ul>
+    </div>
+</nav>

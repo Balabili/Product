@@ -1,0 +1,37 @@
+﻿@Html.Partial("navigationPartial");
+
+<div class="admin-content row">
+    <ul class="nav nav-pills nav-stacked col-lg-2" style="text-align:center;">
+        <li><a href="~/User/Index">Index</a></li>
+        <li class="active"><a href="~/User/InformationConfig">Information Configuration</a></li>
+        <li><a href="~/User/ChangePassword">Change Password</a></li>
+    </ul>
+    <div class="col-lg-9">
+        <h3 style="text-align:center;">Edit Information</h3>
+        <div class="col-lg-4 col-lg-offset-4" style="margin-top:25px;">
+            <label for="name">Name</label>
+            <input class="form-control" type="text" id="name" placeholder="Input Name" />
+            <div id="gender">
+                <label>Gender</label><br>
+                <label class="checkbox-inline">
+                    <input type="radio" name="gender" value="0"> Woman
+                </label>
+                <label class="checkbox-inline">
+                    <input type="radio" name="gender" value="1"> Man
+                </label>
+            </div>
+            <label for="passwordAgain">Age</label>
+            <input class="form-control" type="text" id="age" placeholder="Input Age" />
+            <label for="passwordAgain">Email</label>
+            <input class="form-control" type="text" id="email" placeholder="Input Email" />
+            <button type="button" id="saveInfo" class="btn btn-success col-lg-12" style="margin-top:10px;">Save</button>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        var userInfo = @Html.Raw(Json.Encode(Model));
+    </script>
+    <script src="~/Scripts/User/UserInformation.js"></script>
+}

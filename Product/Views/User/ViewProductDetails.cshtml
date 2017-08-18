@@ -1,0 +1,21 @@
+﻿@Html.Partial("navigationPartial");
+
+<div class="admin-content">
+    <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li class="active">Product List</li>
+    </ol>
+    <div class="userList">
+        <h2 style="text-align:center;">Browse Record</h2>
+        <table id="tb_departments"></table>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        var user = @Html.Raw(Json.Encode(Model));
+    </script>
+    <script src="~/Scripts/bootstrap-table.js"></script>
+    <script src="~/Scripts/bootstrap-table-zh-CN.js"></script>
+    <script src="~/Scripts/User/ViewProductDetails.js"></script>
+}
